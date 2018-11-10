@@ -4,8 +4,12 @@
   "private": true,
   "dependencies": {
     "firebase": "^5.5.6",
+    "image-exists": "^1.1.0",
     "react": "^16.6.0",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.0",
+    "react-images-upload": "^1.2.3",
+    "react-linkify": "^0.2.2",
     "react-redux": "^5.1.0",
     "react-redux-firebase": "^2.1.9",
     "react-scripts": "2.1.1",

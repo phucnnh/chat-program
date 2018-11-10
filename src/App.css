@@ -248,3 +248,11 @@ body {
   height: 50px;
   border-radius: 50%;
 }
+
+.btnLogout{
+  float: right;
+  margin: 10px;
+}
+.userinfo{
+  margin-left: 10px;
+}

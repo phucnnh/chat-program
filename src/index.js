@@ -9,6 +9,9 @@ import { reactReduxFirebase, firebaseReducer } from 'react-redux-firebase';
 import firebase from "firebase";
 import { config as fbconfig } from './App';
 import { render } from 'react-dom';
+import UserReducer from './reducers/UserReducer';
+
+
 const rrfConfig = {
     userProfile: 'users',
     
@@ -25,6 +28,7 @@ const rrfConfig = {
   // Add firebase to reducers
   const rootReducer = combineReducers({
     firebase: firebaseReducer,
+    user: UserReducer,
     //firestore: firestoreReducer // <- needed if using firestore
   })
  
