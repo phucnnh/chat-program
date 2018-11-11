@@ -256,3 +256,19 @@ body {
 .userinfo{
   margin-left: 10px;
 }
+
+.btnLogin{
+  font-size: inherit;
+    border-radius: 15px;
+    padding: 0px 10px 8px 10px;
+    font-family: cursive;
+    text-align: center;
+    background: cornsilk;
+}
+.welcome{
+  background: #c5ddeb;
+  text-align: center;
+  font-size: xx-large;
+  font-family: monospace;
+  color: red;
+}

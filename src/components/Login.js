@@ -13,34 +13,16 @@ class Login extends React.Component {
     return (
         <Grid>
           <Row className="show-grid">
-    <Col xs={6} md={4}>
-    </Col>
-    <Col xs={6} md={4}>
-    <h1 class="text-center">Welcome</h1>
-    </Col>
-    <Col xsHidden md={4}>
-    </Col>
-  </Row>
-  <Row className="show-grid">
-    <Col xs={6} md={4}>
-    </Col>
-    <Col xs={6} md={6}>
+    <Col>
+    <div class="welcome">
+    <h1 class="text-center">Welcome to chat website</h1> 
   <p>
-    This is Chat webpage. To continue, your have to sign in first!
+    Login now with Google account
   </p>
-    </Col>
-    <Col xsHidden md={4}>
-    </Col>
-  </Row>
-  <Row className="show-grid">
-    <Col xs={6} md={4}>
-    </Col>
-    <Col xs={6} md={4}>
     <div class="div-center">
-    <button class="button button1"  onClick={this.handleLogin}>Sign in with Google</button>
+    <button class="btnLogin"  onClick={this.handleLogin}>Login</button>
   </div>
-    </Col>
-    <Col xsHidden md={4}>
+  </div>
     </Col>
   </Row>
 </Grid>

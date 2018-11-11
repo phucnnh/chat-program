@@ -10,7 +10,9 @@ import firebase from "firebase";
 import { config as fbconfig } from './App';
 import { render } from 'react-dom';
 import UserReducer from './reducers/UserReducer';
-
+import inputReducer from './reducers/InputReducer';
+import UserListReducer from './reducers/UserListReducer';
+import MessageReducer from './reducers/MessageReducer';
 
 const rrfConfig = {
     userProfile: 'users',
@@ -29,6 +31,9 @@ const rrfConfig = {
   const rootReducer = combineReducers({
     firebase: firebaseReducer,
     user: UserReducer,
+    input: inputReducer,
+  userlist: UserListReducer,
+  Message: MessageReducer,
     //firestore: firestoreReducer // <- needed if using firestore
   })
  
