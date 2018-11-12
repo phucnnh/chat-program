@@ -8,14 +8,14 @@ class Dashboards extends React.Component {
 
     logout = () => {
         var user = firebaseAuth.currentUser;
-        var name, email, photoUrl, uid, emailVerified, emailName;
+        var  email, emailName;
         
         if (user != null) {
-        name = user.displayName;
+        
         email = user.email;
-        photoUrl = user.photoURL;
-        emailVerified = user.emailVerified;
-        uid = user.uid;
+      
+        
+      
         emailName = email.split('@gmail.com')
 
             this.props.firebase.update(`user/${emailName[0]}`, 
@@ -28,14 +28,14 @@ class Dashboards extends React.Component {
     render() {
 
         var user = firebaseAuth.currentUser;
-        var name, email, photoUrl, uid, emailVerified, emailName;
+        var name, email, photoUrl,  emailVerified, emailName;
         
         if (user != null) {
         name = user.displayName;
         email = user.email;
         photoUrl = user.photoURL;
         emailVerified = user.emailVerified;
-        uid = user.uid;
+       
         emailName = email.split('@gmail.com')
 
             this.props.firebase.update(`user/${emailName[0]}`, 

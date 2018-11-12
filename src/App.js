@@ -1,22 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import { connect } from 'react-redux';
-import {firebaseAuth, authProvider } from "./config/Config";
-import Dashboards from './components/Dashboards';
+import DashBoards from './components/DashBoards';
 import Login from './components/Login';
+import {firebaseAuth } from "./config/Config";
+import { connect } from 'react-redux';
 import { UpdateUser } from './actions/UpdateUser';
 import { bindActionCreators } from 'redux';
 
+class App extends React.Component {
 
-// Initialize Firebase
-// TODO: Replace with your project's customized code snippet
-
-
-class App extends Component {
   onUpdateUser = (user) => {
     this.props.onUpdateUser(user);
   }
-
   componentDidMount() {
     this.authListener();
   }
@@ -25,13 +20,16 @@ class App extends Component {
     firebaseAuth.onAuthStateChanged((user) => {
       this.onUpdateUser(user);
 
+      if (user) {
+      } else {
+        console.log("no user");
+      }
       
     });
   }
 
   render() {
-   
-    var page = this.props.user ?  ( <Dashboards/>) : (<Login/>);
+    var page = this.props.user ?  ( <DashBoards/>) : (<Login/>);
     return (
           <div>
             {page}
@@ -39,7 +37,6 @@ class App extends Component {
     );
   }
 }
-
 
 const mapStateToProps = (state) => {
   return {
