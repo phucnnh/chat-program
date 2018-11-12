@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import { reactReduxFirebase, firebaseReducer } from 'react-redux-firebase';
 import firebase from "firebase";
 import TextboxReducer from './reducers/TextboxReducer';
-import UserListReducer from './reducers/UserListReducer';
+import SearchUserReducer from './reducers/SearchUserReducer';
 import NewMessageReducer from './reducers/NewMessageReducer';
 import LoadImageReducer from './reducers/LoadImageReducer';
 
@@ -29,7 +29,7 @@ const rootReducer = combineReducers({
   firebase: firebaseReducer,
   user: UserReducer,
   textbox: TextboxReducer,
-  userlist: UserListReducer,
+  searchlist: SearchUserReducer,
   newMessage: NewMessageReducer,
   image: LoadImageReducer
 })
