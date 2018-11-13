@@ -10,7 +10,6 @@ import { reactReduxFirebase, firebaseReducer } from 'react-redux-firebase';
 import firebase from "firebase";
 import TextboxReducer from './reducers/TextboxReducer';
 import SearchUserReducer from './reducers/SearchUserReducer';
-import NewMessageReducer from './reducers/NewMessageReducer';
 import LoadImageReducer from './reducers/LoadImageReducer';
 
 const rrfConfig = {
@@ -19,22 +18,21 @@ const rrfConfig = {
 
 
 
-// Add reactReduxFirebase enhancer when making store creator
+
 const createStoreWithFirebase = compose(
-  reactReduxFirebase(firebase, rrfConfig), // firebase instance as first argument
+  reactReduxFirebase(firebase, rrfConfig), 
 )(createStore)
 
-// Add firebase to reducers
+
 const rootReducer = combineReducers({
   firebase: firebaseReducer,
   user: UserReducer,
   textbox: TextboxReducer,
   searchlist: SearchUserReducer,
-  newMessage: NewMessageReducer,
   image: LoadImageReducer
 })
 
-// Create store with reducers and initial state
+
 const initialState = {}
 const store = createStoreWithFirebase(rootReducer, initialState)
 ReactDOM.render(<Provider store={store}>

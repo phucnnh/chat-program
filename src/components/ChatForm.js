@@ -6,7 +6,6 @@ import { bindActionCreators, compose } from 'redux';
 import { Textbox } from '../actions/Textbox';
 import { SearchUser } from '../actions/SearchUser';
 import imageExists from 'image-exists';
-import { NewMessage } from '../actions/NewMessage';
 import Linkify from 'react-linkify';
 import { LoadImage } from '../actions/LoadImage';
 class ChatForm extends React.Component {
@@ -510,7 +509,6 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     onUpdateTextbox: Textbox,
     onSearchUser: SearchUser,
-    onUpdateNewMessage: NewMessage,
     onLoadImage: LoadImage
   }, dispatch);
 }
@@ -523,7 +521,6 @@ export default compose(
     message: state.firebase.data.message,
     textbox: state.textbox,
     searchlist: state.searchlist,
-    newMessage: state.newMessage,
     image: state.image
   })), mapDispatchToProps)
 )(ChatForm)
